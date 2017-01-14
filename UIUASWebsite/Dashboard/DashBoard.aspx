@@ -31,6 +31,7 @@
                         <asp:Label ID="txtCourseID" runat="server" Text='<%# Eval("CourseID") %>'></asp:Label>
                     </EditItemTemplate>
                     <ItemTemplate>
+
                         <asp:Label ID="lblCourseID" runat="server" Text='<%# Bind("CourseID") %>'></asp:Label>
                     </ItemTemplate>
                 </asp:TemplateField>
