@@ -89,7 +89,7 @@ namespace LogicLayer.DataLogic
             return user;
         }
 
-        internal Boolean LoginCheck(string id,string pass)
+        internal string LoginCheck(string id,string pass)
         {
             
             SqlParameter[] parameters = new SqlParameter[]
@@ -104,10 +104,11 @@ namespace LogicLayer.DataLogic
                 //check if any record exist or not
                 if (table.Rows.Count == 1)
                 {
-                    return true;
+                    DataRow row = table.Rows[0];
+                    return row["designation"].ToString(); ;
 
                 }
-                return false;
+                return "";
             }
 
            

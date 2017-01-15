@@ -43,7 +43,7 @@ namespace LogicLayer.BussinessLogic
             return userDBAcess.GetById(id);
         }
 
-        public Boolean LoginCheck(string  id,string pass)
+        public string LoginCheck(string  id,string pass)
         {
             return userDBAcess.LoginCheck(id,pass);
         }

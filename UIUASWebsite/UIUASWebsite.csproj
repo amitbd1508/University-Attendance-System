@@ -211,7 +211,8 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="Dashboard\DashBoard.aspx" />
+    <Content Include="Dashboard\StudentDashBoard.aspx" />
+    <Content Include="Dashboard\TeacherDashBoard.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -414,12 +415,19 @@
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Dashboard\DashBoard.aspx.cs">
-      <DependentUpon>DashBoard.aspx</DependentUpon>
+    <Compile Include="Dashboard\StudentDashBoard.aspx.cs">
+      <DependentUpon>StudentDashBoard.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Dashboard\DashBoard.aspx.designer.cs">
-      <DependentUpon>DashBoard.aspx</DependentUpon>
+    <Compile Include="Dashboard\StudentDashBoard.aspx.designer.cs">
+      <DependentUpon>StudentDashBoard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard\TeacherDashBoard.aspx.cs">
+      <DependentUpon>TeacherDashBoard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dashboard\TeacherDashBoard.aspx.designer.cs">
+      <DependentUpon>TeacherDashBoard.aspx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>

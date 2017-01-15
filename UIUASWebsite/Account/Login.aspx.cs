@@ -30,22 +30,32 @@ namespace UIUASWebsite.Account
         protected void LogIn(object sender, EventArgs e)
         {
             
-            if (loginSucess())
+            if (loginSucess()== ddDesignation.SelectedItem.Text)
             {
-               // Server.Transfer("/Default.aspx", true);
+                if (ddDesignation.SelectedItem.Text == "Student")
+                    Response.Redirect("~/Dashboard/StudentDashBoard.aspx");
+                else if (ddDesignation.SelectedItem.Text == "Faculty")
+                    Response.Redirect("~/Dashboard/TeacherDashBoard.aspx");
+                else if (ddDesignation.SelectedItem.Text == "Admin")
+                    Response.Redirect("~/Account/Register.aspx");
+                else
+                    ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Please Try Again ')", true);
+                // Server.Transfer("/Default.aspx", true);
                 Response.Redirect("/Default.aspx");
             }
             else ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Unsucessfull ')", true);
 
         }
 
-        private bool loginSucess()
+        private string loginSucess()
         {
             UserHandeller handeller = new UserHandeller();
-            
-            if(handeller.LoginCheck(txtUniversityID.Text, txtPassword.Text))
-                return true;
-            return false;
+            string designation = handeller.LoginCheck(txtUniversityID.Text, txtPassword.Text);
+
+
+            if (designation != "")
+                return designation;
+            return designation;
         }
     }
 }

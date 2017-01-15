@@ -13,5 +13,15 @@ namespace UIUASWebsite.Dashboard
         {
 
         }
+
+        protected void btnSPL_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void btnSoftware_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
