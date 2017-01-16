@@ -22,6 +22,10 @@ namespace LogicLayer.BussinessLogic
         {
             return cousreDBAcess.GetCourseStudentByTeacherIDAndCourseCode(TeacherID, CourseCode);
         }
+        public bool TakeAttendanceByStudentID(string StudentID,string CourseCode)
+        {
+            return cousreDBAcess.TakeAttendenceByStudentID(StudentID, CourseCode);
+        }
 
     }
 }

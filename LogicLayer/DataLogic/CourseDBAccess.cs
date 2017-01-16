@@ -52,5 +52,17 @@ namespace LogicLayer.DataLogic
 
             return listofStudent;
         }
+        public bool TakeAttendenceByStudentID(string StudentID, string CourseCode)
+        {
+            SqlParameter[] parameters = new SqlParameter[]
+            {
+                new SqlParameter("@StudentID", StudentID),
+                new SqlParameter("@CourseCode",CourseCode)
+                
+            };
+
+            return SqlDBHelper.ExecuteNonQuery(Constraints.SB_TakeAttendance_By_StudentID, CommandType.StoredProcedure, parameters);
+        }
     }
+   
 }

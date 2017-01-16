@@ -14,6 +14,7 @@ namespace LogicLayer
         public static string SB_USER_GETALL = "tblUserGetAll";
         public static string SB_USER_GET_BY_ID = "tblUserGetById";
         public static string SB_USER_GET_BY_UID_PASS = "tblUserGetByUniversityIDANdPassWord";
+        public static string SB_TakeAttendance_By_StudentID = "tblCTTakeAttendanceByStudentID";
 
         //for session
         public static string LoginID = "LoginID";

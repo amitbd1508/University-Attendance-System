@@ -20,14 +20,14 @@ namespace UIUASWebsite.Dashboard
         protected void btnSPL_Click(object sender, EventArgs e)
         {
             // get spl student of this course of this teacher
-            Session[Constraints.SessoinCourseCode] = "CSI322";
+            Session[Constraints.SessoinCourseCode] = "CSI121";
             Response.Redirect("~/AttendenceTaker/AttendenceTaker.aspx");
 
         }
 
         protected void btnSoftware_Click(object sender, EventArgs e)
         {
-            Session[Constraints.SessoinCourseCode] = "CSI121";
+            Session[Constraints.SessoinCourseCode] = "CSI322";
             Response.Redirect("~/AttendenceTaker/AttendenceTaker.aspx");
         }
     }
