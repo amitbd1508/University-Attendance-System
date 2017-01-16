@@ -26,6 +26,10 @@ namespace LogicLayer.BussinessLogic
         {
             return cousreDBAcess.TakeAttendenceByStudentID(StudentID, CourseCode);
         }
+        public List<Course> GetCourseAndAttendenceByStudentID(string StudentID)
+        {
+            return cousreDBAcess.GetCourseAndAttendenceByStudentID(StudentID);
+        }
 
     }
 }

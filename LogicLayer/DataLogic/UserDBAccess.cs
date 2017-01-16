@@ -161,6 +161,44 @@ namespace LogicLayer.DataLogic
             return user;
         }
 
+
+        public User GetByUniversiyId(string id)
+        {
+            User user = null;
+
+            SqlParameter[] parameters = new SqlParameter[]
+            {
+                new SqlParameter("@university_id", id)
+            };
+            //Lets get the list of all employees in a datataable
+            using (DataTable table = SqlDBHelper.ExecuteSelectCommand(Constraints.SB_User_Get_By_UniversityId, CommandType.StoredProcedure, parameters))
+            {
+                //check if any record exist or not
+                if (table.Rows.Count == 1)
+                {
+                    DataRow row = table.Rows[0];
+
+                    //Lets go ahead and create the list of employees
+                    user = new User();
+
+                    //Now lets populate the employee details into the list of employees                                           
+                    user.Id = Convert.ToInt32(row["id"]);
+                    user.Name = row["name"].ToString();
+                    user.Password = row["password"].ToString();
+                    user.University_id = row["university_id"].ToString();
+                    user.Created_date = Convert.ToDateTime(row["created_date"]);
+                    user.Created_by = row["created_by"].ToString();
+                    user.Modify_date = Convert.ToDateTime(row["modify_date"].ToString());
+                    user.Modify_by = row["modify_by"].ToString();
+                    user.Email = row["email"].ToString();
+                    user.Designation = row["designation"].ToString();
+                    user.Department = row["department"].ToString();
+
+                }
+            }
+
+            return user;
+        }
         public List<User> GetAll()
         {
             List<User> userList = null;

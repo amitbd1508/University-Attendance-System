@@ -22,6 +22,11 @@ namespace LogicLayer.BussinessLogic
             return userDBAcess.Insert(user);
         }
 
+        public User GetByUniversityID(string universityID)
+        {
+            return userDBAcess.GetByUniversiyId(universityID);
+        }
+
         // This fuction does not contain any business logic, it simply returns the 
         // list of employees, we can put some logic here if needed
         public bool Update(User user)

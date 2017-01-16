@@ -80,6 +80,7 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -212,6 +213,7 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Dashboard\AttendenceReport.aspx" />
     <Content Include="Dashboard\StudentDashBoard.aspx" />
     <Content Include="Dashboard\TeacherDashBoard.aspx" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -271,6 +273,17 @@
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Site.Mobile.Master" />
+    <Content Include="UIUASDataSet.xsc">
+      <DependentUpon>UIUASDataSet.xsd</DependentUpon>
+    </Content>
+    <None Include="UIUASDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UIUASDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="UIUASDataSet.xss">
+      <DependentUpon>UIUASDataSet.xsd</DependentUpon>
+    </Content>
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -423,6 +436,13 @@
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Dashboard\AttendenceReport.aspx.cs">
+      <DependentUpon>AttendenceReport.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dashboard\AttendenceReport.aspx.designer.cs">
+      <DependentUpon>AttendenceReport.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Dashboard\StudentDashBoard.aspx.cs">
       <DependentUpon>StudentDashBoard.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -471,6 +491,11 @@
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
     <Compile Include="Startup.cs" />
+    <Compile Include="UIUASDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UIUASDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -487,6 +512,9 @@
       <Project>{e4278b9f-f8b1-40ac-8d8c-06cb933a62d1}</Project>
       <Name>LogicLayer</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Dashboard\StudentReport.rdlc" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
