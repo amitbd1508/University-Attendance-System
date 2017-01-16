@@ -42,7 +42,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BussinessLogic\CourseHandeler.cs" />
     <Compile Include="BussinessLogic\UserHandeller.cs" />
+    <Compile Include="BussinessObject\Course.cs" />
+    <Compile Include="DataLogic\CourseDBAccess.cs" />
     <Compile Include="DataLogic\SqlDBHelper.cs" />
     <Compile Include="BussinessObject\User.cs" />
     <Compile Include="Constraints.cs" />

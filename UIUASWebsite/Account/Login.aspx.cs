@@ -7,6 +7,7 @@ using Owin;
 using UIUASWebsite.Models;
 using LogicLayer.BussinessLogic;
 using LogicLayer.BussinessObject;
+using LogicLayer;
 
 namespace UIUASWebsite.Account
 {
@@ -29,19 +30,24 @@ namespace UIUASWebsite.Account
 
         protected void LogIn(object sender, EventArgs e)
         {
-            
-            if (loginSucess()== ddDesignation.SelectedItem.Text)
+            string loginStatus = loginSucess();
+            if (loginStatus!="")
             {
-                if (ddDesignation.SelectedItem.Text == "Student")
+                Session[Constraints.LoginID] = txtUniversityID.Text;
+
+                if (loginStatus == "Student")
                     Response.Redirect("~/Dashboard/StudentDashBoard.aspx");
-                else if (ddDesignation.SelectedItem.Text == "Faculty")
+                else if (loginStatus == "Faculty")
                     Response.Redirect("~/Dashboard/TeacherDashBoard.aspx");
-                else if (ddDesignation.SelectedItem.Text == "Admin")
+                else if (loginStatus == "Admin")
                     Response.Redirect("~/Account/Register.aspx");
                 else
                     ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Please Try Again ')", true);
-                // Server.Transfer("/Default.aspx", true);
-                Response.Redirect("/Default.aspx");
+                
+
+
+
+
             }
             else ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Unsucessfull ')", true);
 

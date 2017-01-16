@@ -201,6 +201,7 @@
     <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
     <Content Include="Account\UserList.aspx" />
     <Content Include="Account\VerifyPhoneNumber.aspx" />
+    <Content Include="AttendenceTaker\AttendenceTaker.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
@@ -408,6 +409,13 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="AttendenceTaker\AttendenceTaker.aspx.cs">
+      <DependentUpon>AttendenceTaker.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AttendenceTaker\AttendenceTaker.aspx.designer.cs">
+      <DependentUpon>AttendenceTaker.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

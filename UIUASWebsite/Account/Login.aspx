@@ -33,17 +33,8 @@
 
                     </div>
                      <div class="form-group">
-            <asp:Label runat="server" AssociatedControlID="txtName" CssClass="col-md-2 control-label">Designation</asp:Label>
-            <div class="col-md-10">
-                <asp:DropDownList ID="ddDesignation" runat="server" CssClass="form-control-static">
-                    <asp:ListItem Selected="True">Select Designation</asp:ListItem>
-                    <asp:ListItem>Faculty</asp:ListItem>
-                    <asp:ListItem>Student</asp:ListItem>
-                    <asp:ListItem>Admin</asp:ListItem>
-                </asp:DropDownList>
-                <asp:RequiredFieldValidator runat="server" ControlToValidate="ddDesignation"
-                    CssClass="text-danger" ErrorMessage="The Designation  field is required." />
-            </div>
+           
+           
         </div>
                     <div class="form-group">
                         <div class="col-md-offset-2 col-md-10">

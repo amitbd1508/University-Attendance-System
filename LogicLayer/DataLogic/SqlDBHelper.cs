@@ -57,7 +57,7 @@ namespace LogicLayer.BussinessLogic
         }
 
         // This function will be used to execute R(CRUD) operation of parameterized commands
-        internal static DataTable ExecuteParamerizedSelectCommand(string CommandName, CommandType cmdType, SqlParameter[] param)
+        internal static DataTable ExecuteSelectCommand(string CommandName, CommandType cmdType, SqlParameter[] param)
         {
             DataTable table = new DataTable();
 

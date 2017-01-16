@@ -59,7 +59,7 @@ namespace LogicLayer.DataLogic
                 new SqlParameter("@university_id", id)
                };
 
-            using (DataTable table = SqlDBHelper.ExecuteParamerizedSelectCommand(Constraints.SB_USER_GET_BY_UID_PASS, CommandType.StoredProcedure, parameters))
+            using (DataTable table = SqlDBHelper.ExecuteSelectCommand(Constraints.SB_USER_GET_BY_UID_PASS, CommandType.StoredProcedure, parameters))
             {
                 //check if any record exist or not
                 if (table.Rows.Count == 1)
@@ -99,7 +99,7 @@ namespace LogicLayer.DataLogic
 
                };
 
-            using (DataTable table = SqlDBHelper.ExecuteParamerizedSelectCommand(Constraints.SB_USER_GET_BY_UID_PASS, CommandType.StoredProcedure, parameters))
+            using (DataTable table = SqlDBHelper.ExecuteSelectCommand(Constraints.SB_USER_GET_BY_UID_PASS, CommandType.StoredProcedure, parameters))
             {
                 //check if any record exist or not
                 if (table.Rows.Count == 1)
@@ -132,7 +132,7 @@ namespace LogicLayer.DataLogic
                 new SqlParameter("@id", id)
             };
             //Lets get the list of all employees in a datataable
-            using (DataTable table = SqlDBHelper.ExecuteParamerizedSelectCommand(Constraints.SB_USER_GET_BY_ID, CommandType.StoredProcedure, parameters))
+            using (DataTable table = SqlDBHelper.ExecuteSelectCommand(Constraints.SB_USER_GET_BY_ID, CommandType.StoredProcedure, parameters))
             {
                 //check if any record exist or not
                 if (table.Rows.Count == 1)
