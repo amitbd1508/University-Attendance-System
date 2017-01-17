@@ -49,7 +49,7 @@ namespace UIUASWebsite.AttendenceTaker
             ListView1.DataSource = table;
             ListView1.DataBind();
         }
-        protected void GetChecked(object sender, EventArgs e)
+        protected void TakeAttendance(object sender, EventArgs e)
         {
             var items = ListView1.Items.Where(i => ((CheckBox)i.FindControl("Checkbox")).Checked);
             foreach (ListViewItem item in items)
@@ -57,21 +57,17 @@ namespace UIUASWebsite.AttendenceTaker
                 
                 Label index = item.FindControl("Index") as Label;
                 Label studentID = item.FindControl("StudentID") as Label;
-                
-                
+
+
 
                 if (index != null && studentID != null)
                 {
                     string idx = index.Text;
                     string id = studentID.Text;
-                    if (takeAttendance(id))
-                        btnGetChecked.Text = id;
-                    else
-                        btnGetChecked.Text = idx;
-                    
-
+                    takeAttendance(id);
                 }
             }
+            Response.Redirect("~/Dashboard/TeacherDashBoard.aspx");
         }
 
         bool takeAttendance(string StudentID)

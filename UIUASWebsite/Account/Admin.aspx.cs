@@ -109,5 +109,9 @@ namespace UIUASWebsite.Account
 
         }
 
+        protected void btnCreate_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Account/Register.aspx");
+        }
     }
 }

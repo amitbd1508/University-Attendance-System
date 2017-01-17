@@ -32,7 +32,7 @@ namespace UIUASWebsite.Account
                 else if (loginStatus == "Faculty")
                     Response.Redirect("~/Dashboard/TeacherDashBoard.aspx");
                 else if (loginStatus == "Admin")
-                    Response.Redirect("~/Account/Register.aspx");
+                    Response.Redirect("~/Account/Admin.aspx");
                 else
                     ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Please Try Again ')", true);
                 

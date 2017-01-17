@@ -38,7 +38,7 @@
         </tr>
     </ItemTemplate>
 </asp:ListView>
-<asp:Button ID="btnGetChecked" runat="server" Text="Get Checked Items" OnClick="GetChecked" />
+<asp:Button ID="btnGetChecked" runat="server" Text="Submit" OnClick="TakeAttendance" />
         </div>
     </div>
     </form>

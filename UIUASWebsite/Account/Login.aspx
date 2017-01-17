@@ -1,15 +1,17 @@
 ﻿<%@ Page Title="Log in" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="UIUASWebsite.Account.Login" Async="true" %>
 
-<%@ Register Src="~/Account/OpenAuthProviders.ascx" TagPrefix="uc" TagName="OpenAuthProviders" %>
+
 
 <asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
+    
+    <h1>UIU Attendence System</h1>
     <h2><%: Title %>.</h2>
 
     <div class="row">
         <div class="col-md-8">
             <section id="loginForm">
                 <div class="form-horizontal">
-                    <h4>Use a local account to log in.</h4>
+                    
                     <hr />
                     <asp:PlaceHolder runat="server" ID="ErrorMessage" Visible="false">
                         <p class="text-danger">
@@ -50,9 +52,7 @@
                         </div>
                     </div>
                 </div>
-                <p>
-                    <asp:HyperLink runat="server" ID="RegisterHyperLink"  ViewStateMode="Disabled" NavigateUrl="~/Account/Register.aspx">Register as a new user</asp:HyperLink>
-                </p>
+                
                 <p>
                     <%-- Enable this once you have account confirmation enabled for password reset functionality
                     <asp:HyperLink runat="server" ID="ForgotPasswordHyperLink" ViewStateMode="Disabled">Forgot your password?</asp:HyperLink>
@@ -61,10 +61,6 @@
             </section>
         </div>
 
-        <div class="col-md-4">
-            <section id="socialLoginForm">
-                <uc:OpenAuthProviders runat="server" ID="OpenAuthLogin" />
-            </section>
-        </div>
+        
     </div>
 </asp:Content>

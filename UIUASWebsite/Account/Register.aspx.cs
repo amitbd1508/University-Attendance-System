@@ -32,7 +32,7 @@ namespace UIUASWebsite.Account
                 if (userHandeller.Insert(user))
                 {
                     ErrorMessage.Text = "Sucess";
-                    Response.Redirect("~/Account/UserList.aspx");
+                    Response.Redirect("~/Account/Admin.aspx");
                 }
                 else ErrorMessage.Text = "Not Sucess";
             }

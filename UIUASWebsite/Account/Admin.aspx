@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="UserList.aspx.cs" Inherits="UIUASWebsite.Account.UserList" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Admin.aspx.cs" Inherits="UIUASWebsite.Account.UserList" %>
 
 <!DOCTYPE html>
 
@@ -96,6 +96,7 @@
             &nbsp;&nbsp;&nbsp;
             <br />
             <br />
+            <asp:Button ID="btnCreate" runat="server" Text="Create A New User" OnClick="btnCreate_Click" />
         <br />
             <asp:Label ID="lblResult" runat="server" Text=""></asp:Label>
     </div>
